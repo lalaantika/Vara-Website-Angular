@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="txt-clr-pink txt-alignment txt-heading">Log-In</h1>
+    </div>
+</div>
+<form class="">
+    <div class="row margin-top">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            <label class="txt-clr-pink txt-alignment padding-top txt-apperance" for="email">Email</label>
+        </div>
+        <div class="col-md-5">
+            <input formControlName="email" type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            <label class="txt-clr-pink padding-top txt-alignment txt-apperance" for="Password">Password</label>
+        </div>
+        <div class="col-md-5">
+            <input type="password" formControlName="password" class="form-control" /> 
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <button class="ui secondary button">
+                Log-In
+            </button>
+        </div>
+        <div routerLink="signup" class="col-md-5">
+            <button  class="ui secondary button">
+                Sign-Up
+            </button>
+        </div>
+    </div>
+</form>
