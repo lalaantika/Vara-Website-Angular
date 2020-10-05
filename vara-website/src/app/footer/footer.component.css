@@ -1,0 +1,24 @@
+.background{
+    background-color:#191919;
+}
+
+.margin-top{
+    margin-top: 30px;
+}
+.text-position{
+    text-align: center;
+    margin-top: 40px;
+}
+.img {
+    filter: grayscale(100);
+    padding-top: 20px;
+}
+.img:hover{
+    filter: none;
+}
+.margin-left{
+    margin-left: 8px;
+}
+.bottom-padding{
+    padding-bottom: 30px;
+}

@@ -1,0 +1,21 @@
+.txt-alignment{
+    text-align: center;
+}
+.txt-heading{
+    font-size: 32px;
+}
+.txt-apperance{
+    font-size: 20px;
+}
+.margin-top{
+    margin-top: 30px;
+}
+.ui.secondary.button{
+    background-color: #e72ebe;
+    height: 50px;
+    width:auto;
+    font-weight:bolder;
+}
+.padding-top{
+    padding-top: 8px;
+}
