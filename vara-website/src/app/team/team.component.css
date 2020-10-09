@@ -7,3 +7,13 @@
 .alignment{
     text-align: center;
 }
+.top-margin{
+    margin-top: 3rem;
+}
+.neg-margin{
+    margin-top: -.5rem;
+}
+.profile-txt-size{
+    font-size: 1.25rem;
+    text-align: justify;
+}
