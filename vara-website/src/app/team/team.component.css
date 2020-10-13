@@ -1,5 +1,5 @@
 .rounded-circle{
-    border-radius: 150px;
+    border-radius: 50%;
 }
 .margin-top{
     margin-top: 20px;;
@@ -15,5 +15,5 @@
 }
 .profile-txt-size{
     font-size: 1.25rem;
-    text-align: justify;
+    text-align: left;
 }
