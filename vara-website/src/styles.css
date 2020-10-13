@@ -10,6 +10,8 @@
 .txt-clr-blue{
     color: #03DAC5
 }
-.logo-img{
-    align-content: center;
-}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }

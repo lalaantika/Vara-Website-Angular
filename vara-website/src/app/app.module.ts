@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import{environment} from'../environments/environment'
 import { NgForm } from '@angular/forms';
+import{AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,11 @@ import { NgForm } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyAk8AwKvL4wJ2JOj2-ctsZS0gSYFg5uvPQ"
+    
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
