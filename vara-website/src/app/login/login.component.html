@@ -1,38 +1,38 @@
 <div class="row">
     <div class="col-md-12">
-        <h1 class="txt-clr-pink txt-alignment txt-heading">Log-In</h1>
+        <h1 class="txt-clr-blue txt-alignment txt-heading">Log-In</h1>
     </div>
 </div>
 <form (ngSubmit)="login()" class="">
     <div class="row margin-top">
-        <div class="col-md-2"></div>
-        <div class="col-md-3">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
             <label class="txt-clr-pink txt-alignment padding-top txt-apperance" for="email">Email</label>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <input name="email" type="email" class="form-control" [(ngModel)]="email" required/>
         </div>
     </div>
     <div class="row margin-top">
-        <div class="col-md-2"></div>
-        <div class="col-md-3">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
             <label class="txt-clr-pink padding-top txt-alignment txt-apperance" for="Password">Password</label>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <input type="password" name="password" class="form-control"[(ngModel)]="password" required /> 
         </div>
     </div>
     <div class="row margin-top">
         <div class="col-md-3"></div>
-        <div class="col-md-3">
-            <button type="submit" class="ui secondary button">
-                Log-In
-            </button>
-        </div>
-        <div class='col-md-2'></div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <button onclick="signUp()" type="submit" class="ui secondary button">
                 Sign-up
+            </button>
+        </div>
+        <div class='col-md-1'></div>
+        <div class="col-md-2">
+            <button type="submit" class="ui secondary button">
+                Log-In
             </button>
         </div>
     </div>
