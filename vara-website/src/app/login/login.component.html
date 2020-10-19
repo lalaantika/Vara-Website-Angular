@@ -3,14 +3,14 @@
         <h1 class="txt-clr-pink txt-alignment txt-heading">Log-In</h1>
     </div>
 </div>
-<form (ngSubmit)="login()" class="">
+<form>
     <div class="row margin-top">
         <div class="col-md-2"></div>
         <div class="col-md-3">
             <label class="txt-clr-pink txt-alignment padding-top txt-apperance" for="email">Email</label>
         </div>
         <div class="col-md-5">
-            <input name="email" type="email" class="form-control" [(ngModel)]="email" required/>
+            <input name="email" type="email" #email class="form-control" required autofocus/>
         </div>
     </div>
     <div class="row margin-top">
@@ -19,20 +19,21 @@
             <label class="txt-clr-pink padding-top txt-alignment txt-apperance" for="Password">Password</label>
         </div>
         <div class="col-md-5">
-            <input type="password" name="password" class="form-control"[(ngModel)]="password" required /> 
+            <input type="password" name="password" #password class="form-control" required autofocus /> 
         </div>
     </div>
     <div class="row margin-top">
         <div class="col-md-3"></div>
         <div class="col-md-3">
-            <button type="submit" class="ui secondary button">
+            <button type="submit" class="ui secondary button"(click)="authService.login(email.value, password.value)">
                 Log-In
             </button>
         </div>
         <div class='col-md-2'></div>
         <div class="col-md-3">
-            <button onclick="signUp()" type="submit" class="ui secondary button">
-                Sign-up
+            <button  class="ui secondary button">
+                <a routerLink="sign-up" class="txt-clr-white active item menutext">Sign-up
+                </a> 
             </button>
         </div>
     </div>
