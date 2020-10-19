@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import{AngularFireModule} from '@angular/fire';
-import{AngularFireDatabaseModule} from '@angular/fire/database'
-import{AngularFirestoreModule} from '@angular/fire/firestore'
-import{FormsModule} from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuth } from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -16,9 +18,10 @@ import { TechSupportComponent } from './tech-support/tech-support.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import{environment} from'../environments/environment'
+import { environment } from'../environments/environment'
 import { NgForm } from '@angular/forms';
-import{AgmCoreModule} from '@agm/core';
+import { AgmCoreModule } from '@agm/core';
+import { UserAuthserviceService } from './services/user-authservice.service';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,13 @@ import{AgmCoreModule} from '@agm/core';
     TechSupportComponent,
     FooterComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule,
@@ -45,7 +49,7 @@ import{AgmCoreModule} from '@agm/core';
     
     }),
   ],
-  providers: [],
+  providers: [UserAuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
