@@ -121,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vara-website"
+    }
+  },
+  "defaultProject": "vara-website",
+  "cli": {
+    "analytics": "6963d5ad-d99b-4c30-91ac-6dc3780fba36"
+  }
 }
