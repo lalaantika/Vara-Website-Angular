@@ -22,6 +22,7 @@ import { environment } from'../environments/environment'
 import { NgForm } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { UserAuthserviceService } from './services/user-authservice.service';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { UserAuthserviceService } from './services/user-authservice.service';
     FooterComponent,
     LoginComponent,
     SignUpComponent,
+    ProfileInfoComponent,
   ],
   imports: [
     BrowserModule,
