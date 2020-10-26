@@ -5,6 +5,9 @@ import { User } from "../services/user";
 import{ AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { auth } from 'firebase/app';
 import { UserInfoService } from './user-info.service';
+import { getuid, setuid } from 'process';
+import { stringify } from 'querystring';
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +15,7 @@ import { UserInfoService } from './user-info.service';
 export class UserAuthserviceService {
   user: User;
   userInfo: UserInfoService;
+  currentUser: any;
   
   constructor( 
     public afs: AngularFirestore, 
@@ -33,17 +37,24 @@ export class UserAuthserviceService {
   }
 
   
-  async register(fname:string, lname:string, phone:string,city:string, email: string, password: string) {
+  async register(email: string, password: string, fname:string,
+     lname: string, phone:string, city:string) {
     var result = await this.afAuth.createUserWithEmailAndPassword(email, password)
-    this.sendEmailVerification();
-    this.userInfo.createUser(fname,lname,email,phone,city);
+    let uid = (await this.afAuth.currentUser).uid
+    this.sendEmailVerification()
+    return from( this.afs.collection('/UserInfo').doc(uid).set({
+      firstname: fname, 
+      lastname:lname, 
+      email:email, 
+      phone:phone, 
+      city:city,
+    }))
   }
 
   async sendEmailVerification() {
     await (await this.afAuth.currentUser).sendEmailVerification()
     this.router.navigate(['profile-info']);
   }
-
   async sendPasswordResetEmail(passwordResetEmail: string) {
     return await this.afAuth.sendPasswordResetEmail(passwordResetEmail);
  }
