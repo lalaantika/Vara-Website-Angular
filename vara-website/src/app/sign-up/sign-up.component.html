@@ -69,8 +69,9 @@
             <div class="col-md-7"></div>
             <div class="col-md-2 btn-alignment">
                 <button type="submit" class="ui secondary button"
-                (click)="authService.register(FirstName.value, LastName.value, PhoneNumber.value,
-                city.value, Email.value, Password.value)">
+                (click)="authService.register(Email.value, Password.value, 
+                FirstName.value,LastName.value,PhoneNumber.value,
+                city.value)">
                     Sign-Up
                 </button>
             </div>
@@ -80,4 +81,3 @@
 <div class="row">
     <app-footer></app-footer>
 </div>
-fname:string, lname:string, phone:string,city:string, email: string, password: string)
