@@ -8,6 +8,7 @@ import { UserInfoService } from './user-info.service';
 import { getuid, setuid } from 'process';
 import { stringify } from 'querystring';
 import { from } from 'rxjs';
+import { IdStorageService } from './id-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,7 @@ export class UserAuthserviceService {
   constructor( 
     public afs: AngularFirestore, 
     public afAuth: AngularFireAuth, 
+    public idstorage: IdStorageService,
     public router:Router) {
       this.afAuth.authState.subscribe(user => {
         if (user){
@@ -34,6 +36,8 @@ export class UserAuthserviceService {
   async login(email: string, password: string) {
   var result = await this.afAuth.signInWithEmailAndPassword(email, password)
   this.router.navigate(['profile-info']);
+  let uid = (await this.afAuth.currentUser).uid
+  this.idstorage.setUid(uid)
   }
 
   
@@ -41,6 +45,7 @@ export class UserAuthserviceService {
      lname: string, phone:string, city:string) {
     var result = await this.afAuth.createUserWithEmailAndPassword(email, password)
     let uid = (await this.afAuth.currentUser).uid
+    this.idstorage.setUid(uid)
     this.sendEmailVerification()
     return from( this.afs.collection('/UserInfo').doc(uid).set({
       firstname: fname, 
