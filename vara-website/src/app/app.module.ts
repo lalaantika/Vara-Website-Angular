@@ -23,6 +23,7 @@ import { NgForm } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { UserAuthserviceService } from './services/user-authservice.service';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
       apiKey: "AIzaSyAk8AwKvL4wJ2JOj2-ctsZS0gSYFg5uvPQ"
     
     }),
+    NgbModule,
   ],
   providers: [UserAuthserviceService],
   bootstrap: [AppComponent]
