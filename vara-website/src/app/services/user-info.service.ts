@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from './user';
+import { User } from '../interfaces/user';
 import { UserAuthserviceService } from './user-authservice.service';
 
 @Injectable({

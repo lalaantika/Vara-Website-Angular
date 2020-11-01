@@ -14,3 +14,19 @@
     font-size: 1.25rem;
     font-weight: 800;
 }
+.background{
+    background-color:#191919;
+}
+.scrolling-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: wrap;
+    display: inline-block;
+    text-align: left;
+}
+  
+.scroll-height {
+    max-height: 220px;
+    width: 420px;
+}
+  
