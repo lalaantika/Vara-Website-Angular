@@ -3,66 +3,79 @@
       <h1 class="txt-clr-blue">User Profile Information</h1>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="row margin-top">
+            <div class="col-md-4">
+                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="Email">Email</label>
+            </div>
+            <div class="col-md-4">
+                <h2 class="txt-clr-white"> {{userData.email}}</h2>
+                <!-- <input type="Email" name="Email" #Email class="form-control" required autofocus />  -->
+            </div>
+        </div>
 
-<div class="row margin-top">
- 
-    <div class="col-md-2">
-        <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="Email">Email</label>
-    </div>
-    <div class="col-md-4">
-        <h2 class="txt-clr-white"> {{userData.email}}</h2>
-        <!-- <input type="Email" name="Email" #Email class="form-control" required autofocus />  -->
-    </div>
-</div>
+        <div class="row margin-top">
+            <div class="col-md-4">
+                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="FirstName">First-Name</label>
+            </div>
+            <div class="col-md-4">
+                <h2 class="txt-clr-white"> {{userData.firstname}}</h2>
+                <!-- <input type="text" name="FirstName" #FirstName class="form-control" required autofocus />  -->
+            </div>
+        </div>
 
-<div class="row margin-top">
-    <div class="col-md-2">
-        <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="FirstName">First-Name</label>
-    </div>
-    <div class="col-md-4">
-        <h2 class="txt-clr-white"> {{userData.firstname}}</h2>
-        <!-- <input type="text" name="FirstName" #FirstName class="form-control" required autofocus />  -->
-    </div>
-</div>
+        <div class="row margin-top">
+            <div class="col-md-4">
+                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="LastName">Last-Name</label>
+            </div>
+            <div class="col-md-4">
+                <h2 class="txt-clr-white"> {{userData.lastname}}</h2>
+                
+                <!-- <input type="text" name="LastName" #LastName class="form-control" required autofocus />  -->
+            </div>
+        </div>
 
-<div class="row margin-top">
-    <div class="col-md-2">
-        <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="LastName">Last-Name</label>
-    </div>
-    <div class="col-md-4">
-        <h2 class="txt-clr-white"> {{userData.lastname}}</h2>
-        
-        <!-- <input type="text" name="LastName" #LastName class="form-control" required autofocus />  -->
-    </div>
-</div>
-
-<div class="row margin-top">
-    <div class="col-md-2">
-        <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="PhoneNumber">Phone-Number</label>
-    </div>
-    <div class="col-md-4">
-        <h2 class="txt-clr-white"> {{userData.phone}}</h2>
-        <!-- <input type="text" name="PhoneNumber" #PhoneNumber class="form-control" required autofocus />  -->
-    </div>
-</div>
+        <div class="row margin-top">
+            <div class="col-md-4">
+                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="PhoneNumber">Phone-Number</label>
+            </div>
+            <div class="col-md-4">
+                <h2 class="txt-clr-white"> {{userData.phone}}</h2>
+                <!-- <input type="text" name="PhoneNumber" #PhoneNumber class="form-control" required autofocus />  -->
+            </div>
+        </div>
 
 
-<div class="row margin-top">
-    <div class="col-md-2">
-        <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="city">City</label>
+        <div class="row margin-top">
+            <div class="col-md-4">
+                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="city">City</label>
+            </div>
+            <div class="col-md-4">
+                <h2 class="txt-clr-white"> {{userData.city}}</h2>
+                <!-- <input type="text" name="city" #city class="form-control" required autofocus />  -->
+            </div>
+        </div>
+        <div class="row margin-top">
+            <!-- <div class="col-md-3"></div> -->
+            <div class="col-md-2">
+                <button onclick="" type="submit" class="ui secondary button">
+                    Save
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2 class="txt-clr-white"> {{userData.city}}</h2>
-        <!-- <input type="text" name="city" #city class="form-control" required autofocus />  -->
+
+    <div class="col-md-5 background txt-clr-blue">
+        <h2> Rides done by you</h2>
+        <div class="scrolling-wrapper scroll-height" *ngIf="allRideData?.length > 0">
+            <label class="display-vert pad-left" *ngFor="let ride of allRideData">
+                <h3 class ="txt-clr-white">Ads Played  = {{ ride.adds_played }}</h3>
+                <h3 class ="txt-clr-white">Time  = {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</h3>
+            </label>
+        </div>
     </div>
-</div>
-<div class="row margin-top">
-    <div class="col-md-3"></div>
-    <div class="col-md-2">
-        <button onclick="" type="submit" class="ui secondary button">
-            Save
-        </button>
-    </div>
+    <div class="col-md-1"></div>
 </div>
 
 <div class="row">
