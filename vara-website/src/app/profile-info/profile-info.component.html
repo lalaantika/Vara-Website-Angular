@@ -1,6 +1,9 @@
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
       <h1 class="txt-clr-blue">User Profile Information</h1>
+    </div>
+    <div class="col-md-6">
+        <h1 class="txt-clr-blue"> Rides done by you</h1>
     </div>
 </div>
 <div class="row">
@@ -65,19 +68,20 @@
             </div>
         </div>
     </div>
-
+         
     <div class="col-md-5 background txt-clr-blue">
-        <h2> Rides done by you</h2>
+       
         <div class="scrolling-wrapper scroll-height" *ngIf="allRideData?.length > 0">
             <label class="display-vert pad-left" *ngFor="let ride of allRideData">
-                <h3 class ="txt-clr-white">Ads Played  = {{ ride.adds_played }}</h3>
-                <h3 class ="txt-clr-white">Time  = {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</h3>
+                <h3 class ="txt-clr-white">Ads Played  = {{ ride.adds_played }}
+                    Time  = {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}
+                </h3>
+                
             </label>
         </div>
     </div>
     <div class="col-md-1"></div>
 </div>
-
 <div class="row">
     <app-footer></app-footer>
 </div>
