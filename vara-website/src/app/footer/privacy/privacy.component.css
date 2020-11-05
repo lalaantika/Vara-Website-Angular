@@ -1,35 +1,3 @@
-.background{
-    background-color:#191919;
-}
-
-.margin-top{
-    margin-top: 30px;
-    align-content: space-between;
-}
-
-.text-position{
-    text-align: left;
-    margin-top: 2rem;
-}
-
-.img {
-    filter: grayscale(100);
-    padding-top: 20px;
-    width: 3rem;
-}
-
-.img:hover{
-    filter: none;
-}
-
-.margin-left{
-    margin-left: 1.75rem;
-}
-
-.bottom-padding{
-    padding-bottom: 30px;
-}
-
 .popup {
     min-width: 600px;
     font-size: 1.25rem;
@@ -58,5 +26,8 @@
 }
 
 .term-heading {
-    margin-left: 14rem;
+    margin-left: 15rem;
+}
+.margin-left{
+    margin-left: 1.75rem;
 }

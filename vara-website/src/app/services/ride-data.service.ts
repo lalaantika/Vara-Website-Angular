@@ -14,7 +14,8 @@ export class RideDataService {
     private idStore: IdStorageService) { }
 
   getRideByDriverId(): Observable<RideData []> {
-		return this.db.collection('/rideCapture', ref => ref.where('driverId', '==', this.idStore.getUId()))
+		return this.db.collection('/rideCapture', ref => ref.where('driverId', '==', this.idStore.getUId()
+		))
 			.snapshotChanges().pipe(
 				map(action => {
 					return action.map(res => {

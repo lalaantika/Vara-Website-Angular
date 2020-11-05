@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { InvestorPageComponent } from './investor-page/investor-page.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'team',
     component: TeamComponent
+  },
+  {
+    path: 'investor-page',
+    component: InvestorPageComponent
   },
   {
     path: 'about-us',
