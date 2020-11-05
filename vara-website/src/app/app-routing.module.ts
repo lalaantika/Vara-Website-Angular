@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { InvestorPageComponent } from './investor-page/investor-page.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TeamComponent } from './team/team.component';
 import { TechSupportComponent } from './tech-support/tech-support.component';
@@ -13,6 +15,10 @@ const routes: Routes = [
   {
     path: 'team',
     component: TeamComponent
+  },
+  {
+    path: 'investor-page',
+    component: InvestorPageComponent
   },
   {
     path: 'about-us',
@@ -35,8 +41,12 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'signup',
+    path: 'sign-up',
     component: SignUpComponent
+  },
+  {
+    path: 'profile-info',
+    component: ProfileInfoComponent
   },
   {
     path: '**',

@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import{AngularFireModule} from '@angular/fire';
-import{AngularFireDatabaseModule} from '@angular/fire/database'
-import{AngularFirestoreModule} from '@angular/fire/firestore'
-import{FormsModule} from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuth } from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -16,8 +18,14 @@ import { TechSupportComponent } from './tech-support/tech-support.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import{environment} from'../environments/environment'
+import { environment } from'../environments/environment'
 import { NgForm } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+import { UserAuthserviceService } from './services/user-authservice.service';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrivacyComponent } from './footer/privacy/privacy.component';
+import { InvestorPageComponent } from './investor-page/investor-page.component';
 
 @NgModule({
   declarations: [
@@ -30,17 +38,26 @@ import { NgForm } from '@angular/forms';
     TechSupportComponent,
     FooterComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    ProfileInfoComponent,
+    PrivacyComponent,
+    InvestorPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyAk8AwKvL4wJ2JOj2-ctsZS0gSYFg5uvPQ"
+    
+    }),
+    NgbModule,
   ],
-  providers: [],
+  providers: [UserAuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

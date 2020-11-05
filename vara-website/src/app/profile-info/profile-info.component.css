@@ -1,0 +1,49 @@
+.margin-top{
+    margin-top: 1.75rem;
+}
+
+.profile-label{
+    font-size: 1.75rem;
+}
+
+.ui.secondary.button{
+    margin: 50px 0 50px 0;
+    background-color: #e72ebe;
+    height: 45px;
+    width: 125px;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+.background{
+    background-color:#191919;
+}
+.scrolling-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: wrap;
+    display: inline-block;
+    text-align: left;
+}
+  
+.scroll-height {
+    max-height: 361px;
+    min-height: 360px;
+    width: 400px;
+}
+  
+th {
+    padding: 1rem;
+    padding-left: 3rem;
+    text-align: center;
+    padding-top: 3.25rem;
+}
+
+td {
+    margin-left: 6px;
+    padding: 1rem;
+    text-align: center;
+    padding-left: 3rem;
+}
+tr {
+    padding: 2rem;
+}
