@@ -24,6 +24,8 @@ import { AgmCoreModule } from '@agm/core';
 import { UserAuthserviceService } from './services/user-authservice.service';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrivacyComponent } from './footer/privacy/privacy.component';
+import { InvestorPageComponent } from './investor-page/investor-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     SignUpComponent,
     ProfileInfoComponent,
+    PrivacyComponent,
+    InvestorPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row margin-top">
     <div class="col-md-6">
       <h1 class="txt-clr-blue">User Profile Information</h1>
     </div>
     <div class="col-md-6">
-        <h1 class="txt-clr-blue"> Rides done by you</h1>
+        <h1 class="txt-clr-blue"> Driver's Ride</h1>
     </div>
 </div>
 <div class="row">
@@ -49,7 +49,6 @@
             </div>
         </div>
 
-
         <div class="row margin-top">
             <div class="col-md-4">
                 <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="city">City</label>
@@ -62,24 +61,31 @@
         <div class="row margin-top">
             <!-- <div class="col-md-3"></div> -->
             <div class="col-md-2">
-                <button onclick="" type="submit" class="ui secondary button">
-                    Save
+                <button onclick="" type="submit" [routerLink]="['/investor-page']" routerLinkActive="router-link-active"
+                 class="ui secondary button">
+                    Investor
                 </button>
             </div>
         </div>
     </div>
          
-    <div class="col-md-5 background txt-clr-blue">
-       
+    <div class="col-md-5 background margin-top">
         <div class="scrolling-wrapper scroll-height" *ngIf="allRideData?.length > 0">
-            <label class="display-vert pad-left" *ngFor="let ride of allRideData">
-                <h3 class ="txt-clr-white">Ads Played  = {{ ride.adds_played }}
-                    Time  = {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}
-                </h3>
-                
-            </label>
+            <table>
+                <tr class ="txt-clr-white">
+                    <th>Ads Played </th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                <tr class="display-vert pad-left txt-clr-white" *ngFor="let ride of allRideData">
+                    <td>{{ ride.adds_played }}</td>
+                    <td> {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
+                    <td> {{ride.ride_date.seconds * (1000.0)| date: 'hh:mm'}}</td>
+                </tr>
+            </table>
         </div>
     </div>
+
     <div class="col-md-1"></div>
 </div>
 <div class="row">
