@@ -31,6 +31,7 @@
     "schematics": "^0.2.0",
     "semantic-ui-css": "^2.4.1",
     "tslib": "^2.0.0",
+    "typeface-muli": "^1.1.13",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
