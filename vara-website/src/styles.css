@@ -24,3 +24,17 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
  }
+ /* Black & Pink with White Lettering */
+ .btn-main{
+    background:     #FF66C4;
+    background:    linear-gradient(#000000, #FF66C4 50%, #000000);
+    border:        3px solid #ffffff;
+    border-radius: 25px;
+    box-shadow:    2px 2px #ffffff;
+    padding:       20px 50px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 15px/1 "Roboto-Italic", sans-serif;
+    text-align:    center;
+    text-shadow:   1px 1px #FF66C4;
+ }

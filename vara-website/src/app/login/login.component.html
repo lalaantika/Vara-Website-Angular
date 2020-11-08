@@ -25,13 +25,13 @@
     <div class="row margin-top">
         <div class="col-md-3"></div>
         <div class="col-md-2">
-            <button class="ui secondary button" [routerLink]="['/sign-up']" routerLinkActive="router-link-active">
+            <button class="btn-main" [routerLink]="['/sign-up']" routerLinkActive="router-link-active">
                Sign-Up
             </button>
         </div>
         <div class='col-md-1'></div>
         <div class="col-md-3 btn-alignment ">
-            <button type="submit" class="ui secondary button"(click)="authService.login(email.value, password.value)">
+            <button type="submit" class="btn-main"(click)="authService.login(email.value, password.value)">
                 Log-In
             </button>
         </div>
