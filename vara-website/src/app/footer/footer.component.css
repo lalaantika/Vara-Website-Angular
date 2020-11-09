@@ -1,13 +1,13 @@
-.background{
+.background {
     background-color:#191919;
 }
 
-.margin-top{
+.margin-top {
     margin-top: 30px;
     align-content: space-between;
 }
 
-.text-position{
+.text-position {
     text-align: left;
     margin-top: 2rem;
 }
@@ -18,15 +18,15 @@
     width: 3rem;
 }
 
-.img:hover{
+.img:hover {
     filter: none;
 }
 
-.margin-left{
+.margin-left {
     margin-left: 1.75rem;
 }
 
-.bottom-padding{
+.bottom-padding {
     padding-bottom: 30px;
 }
 
