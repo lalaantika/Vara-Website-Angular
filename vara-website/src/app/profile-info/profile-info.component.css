@@ -35,15 +35,18 @@ th {
     padding: 1rem;
     padding-left: 3rem;
     text-align: center;
-    padding-top: 3.25rem;
+    padding-top: 1rem;
+    width: 130px;
 }
 
 td {
-    margin-left: 6px;
-    padding: 1rem;
-    text-align: center;
+
+    padding: .5rem;
     padding-left: 3rem;
+    text-align: center;
+    width: 200px;
 }
 tr {
-    padding: 2rem;
+    padding: .5rem;
+    width: 175px;
 }
