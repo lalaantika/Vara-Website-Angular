@@ -25,3 +25,8 @@
 .btn-alignment {
    margin-left: 3rem;
 }
+
+.pwd-reset {
+    margin-left: -25px;
+    text-decoration: underline;
+}
