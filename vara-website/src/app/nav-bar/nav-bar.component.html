@@ -24,14 +24,13 @@
     Tech-Support
   </a>
   <div class="right menu">
-    <!-- <div class="item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search link icon"></i>
-      </div>
-    </div> -->
-    <a routerLink="login" class="ui item btn-main ">
+  <a routerLink="login" class="ui item btn-main " *ngIf="isLoggedIn$; else notLoggedIn">
       Log In
+  </a>
+  <ng-template #notLoggedIn>
+    <a routerLink="login" class="ui item btn-main " (click)="userauthService.logout()">
+      Log out
     </a>
+  </ng-template>
   </div>
 </div>
