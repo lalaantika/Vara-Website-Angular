@@ -27,7 +27,7 @@ export class ProfileInfoComponent implements OnInit {
 
   getUserData() {
     this.userInfo.getUserByID(this.Uid).subscribe((res) => {
-      this.userData = res as unknown as UserInfo;
+      this.userData = res as unknown  as UserInfo;
     })
   }
 
