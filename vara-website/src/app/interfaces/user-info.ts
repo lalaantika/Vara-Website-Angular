@@ -4,6 +4,8 @@ export class UserInfo {
     email: string;
     phone: string;
     city: string;
+    admin:boolean;
+    investor:boolean;
 
     constructor(firstName:string, lastName:string, email:string, phone:string, city:string) {
         this.firstName = firstName;
@@ -11,5 +13,7 @@ export class UserInfo {
         this.email = email;
         this.phone = phone;
         this.city = city;
+        this.admin = false;
+        this.investor = false;
     }
 }
