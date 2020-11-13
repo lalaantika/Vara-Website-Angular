@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IdStorageService } from '../services/id-storage.service';
 import { UserAuthserviceService } from '../services/user-authservice.service';
 
 @Component({
@@ -8,12 +9,17 @@ import { UserAuthserviceService } from '../services/user-authservice.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  isLoggedIn$: Observable<boolean>;
-  constructor(public userauthService: UserAuthserviceService) { }
+  isLoggedIn$:string
+  constructor(public idstorage: IdStorageService,
+    public userauthService: UserAuthserviceService) { }
 
   ngOnInit(): void {
-    this.isLoggedIn$ = this.userauthService.isLoggedIn;
-    console.log(this.isLoggedIn$)
+   this.isLoggedIn$ = this.idstorage.getUloggedIn()
   }
- 
+
+  reload(){
+    setTimeout(function(){
+    location.reload();
+    },1000); 
+  }
 }

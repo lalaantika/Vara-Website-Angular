@@ -17,8 +17,6 @@ export class UserAuthserviceService {
   user: User;
   userInfo: UserInfoService;
   currentUser: any;
-  public loggedIn: BehaviorSubject<boolean> = new
-  BehaviorSubject<boolean>(false);
   
   constructor( 
     public afs: AngularFirestore, 
@@ -37,11 +35,10 @@ export class UserAuthserviceService {
 
   async login(email: string, password: string) {
   var result = await this.afAuth.signInWithEmailAndPassword(email, password)
-  this.loggedIn.next(true);
+  this.idstorage.setloggedIn("true")
   this.router.navigate(['profile-info']);
   let uid = (await this.afAuth.currentUser).uid
   this.idstorage.setUid(uid)
-  this.loggedIn.next(true);
   }
   
   async register(email: string, password: string, fname:string,
@@ -49,7 +46,7 @@ export class UserAuthserviceService {
     var result = await this.afAuth.createUserWithEmailAndPassword(email, password)
     let uid = (await this.afAuth.currentUser).uid
     this.idstorage.setUid(uid)
-    this.loggedIn.next(true);
+    this.idstorage.setloggedIn("true")
     this.sendEmailVerification()
     return from( this.afs.collection('/UserInfo').doc(uid).set({
       firstname: fname, 
@@ -71,20 +68,9 @@ export class UserAuthserviceService {
   async logout(){
     await this.afAuth.signOut();
     localStorage.removeItem('user');
-    this.router.navigate(['admin/login']);
-    this.loggedIn.next(false);
+    this.router.navigate(['/home']);
+    this.idstorage.setloggedIn("false")
     let uid=""
     this.idstorage.setUid(uid)
   }
-
-  get isLoggedIn() {
-    return this.loggedIn.asObservable();
-  }
-
-
-  // get isLoggedIn(): boolean {
-  //   const  user  =  JSON.parse(localStorage.getItem('user'));
-  //   return  user  !==  null;
-  // }
-
 }

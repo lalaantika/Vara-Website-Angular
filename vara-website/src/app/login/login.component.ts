@@ -13,4 +13,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  reload(){
+    setTimeout(function(){
+    location.reload();
+    },1000); 
+  }
 }

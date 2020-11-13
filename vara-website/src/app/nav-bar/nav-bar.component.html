@@ -24,11 +24,11 @@
     Tech-Support
   </a>
   <div class="right menu">
-  <a routerLink="login" class="ui item btn-main " *ngIf="isLoggedIn$; else notLoggedIn">
+  <a routerLink="login" class="ui item btn-main " *ngIf="isLoggedIn$=='false'; else notLoggedIn">
       Log In
   </a>
   <ng-template #notLoggedIn>
-    <a routerLink="login" class="ui item btn-main " (click)="userauthService.logout()">
+    <a routerLink="home" class="ui item btn-main " (click)="userauthService.logout()"(click)="reload()">
       Log out
     </a>
   </ng-template>

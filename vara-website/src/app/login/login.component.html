@@ -35,21 +35,42 @@
         <div class='col-md-1'></div>
         <div class="col-md-3 btn-alignment ">
             <h3></h3>
-            <button type="submit" class="btn-main"(click)="authService.login(email.value, password.value)">
+            <button type="submit" class="btn-main"(click)="authService.login(email.value, password.value)"
+            (click)="reload()">
                 Log-In
             </button>
         </div>
     </div>
+</form>
     <div class="row margin-top">
         <div class="col-md-5"></div>
         <div class="col-md-2">
             <p></p>
-            <a class="txt-clr-blue pwd-reset" [routerLink]="['/sign-up']" routerLinkActive="router-link-active">
-               Forgot Your Password
+            <a ngbDropdown>
+                <a href (click)="(false)" class="txt-clr-blue pwd-reset" ngbDropdownToggle>
+                   Forget Your Password
+                </a>
+                <div ngbDropdownMenu class="drop-box" id="background">
+                    <div class="popup  color-tx-green">
+                        <h3></h3>
+                        <h2 class= "txt-clr-pink term-heading">Forget Password</h2>
+                        <form>
+                            <div>
+                                <label class="txt-clr-white txt-alignment padding-top txt-apperance" for="email2">Email</label>
+                            </div>
+                            <div>
+                                <input name="email2" type="email2" #email2 class="form-control email-box" required autofocus/>
+                            </div> 
+                            <button type="submit" class="btn-main"(click)="authService.sendPasswordResetEmail(email2.value)">
+                                Submit
+                            </button>                       
+                        </form>
+                    </div>
+                </div>
             </a>
+            
         </div>
     </div>
-</form>
 <div class="row">
     <app-footer></app-footer>
 </div>
