@@ -1,5 +1,6 @@
 .background-clr {
-    background-color: #191919;
+    /* background-color: #191919; */
+    background-color: whitesmoke;
 }
 
 .txt-clr-white {        /* The main white for the entire site */
@@ -12,6 +13,10 @@
 
 .txt-clr-blue {         /* Headlines & Main Titles - same as in app */
     color: #03DAC5
+}
+
+.txt-clr-black {
+    color: #191919;   /* Text color on a white background */
 }
 
 .center-block {

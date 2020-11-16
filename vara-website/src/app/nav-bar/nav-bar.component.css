@@ -6,8 +6,9 @@
     color:whitesmoke;
 }
 .ui.secondary.menu {
-    background-color:#191919;
-        margin-bottom: 30px;
+    /* background-color:#191919; */
+    background-color: whitesmoke;
+    margin-bottom: 30px;
 }
 
 .logo-changes {
