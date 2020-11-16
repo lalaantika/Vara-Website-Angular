@@ -6,6 +6,10 @@
     font-size: 1.75rem;
 }
 
+.txt-apperance {
+    font-size: 1.6rem;
+}
+
 .ui.secondary.button{
     margin: 50px 0 50px 0;
     background-color: #e72ebe;
