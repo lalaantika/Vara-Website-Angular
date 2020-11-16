@@ -23,7 +23,7 @@
                 <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="FirstName">First-Name</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.firstname}}</h2>
+                <h2 class="txt-clr-white"> {{userData.firstName}}</h2>
                 <!-- <input type="text" name="FirstName" #FirstName class="form-control" required autofocus />  -->
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="LastName">Last-Name</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.lastname}}</h2>
+                <h2 class="txt-clr-white"> {{userData.lastName}}</h2>
                 
                 <!-- <input type="text" name="LastName" #LastName class="form-control" required autofocus />  -->
             </div>
@@ -61,24 +61,25 @@
         <div class="row margin-top">
             <!-- <div class="col-md-3"></div> -->
             <div class="col-md-2">
-                <button onclick="" type="submit" [routerLink]="['/investor-page']" routerLinkActive="router-link-active"
-                 class="ui secondary button">
-                    Investor
+                <button type="submit" (click)="getInvestor(userData.investor)" class="btn-main">
+                    Investors
                 </button>
             </div>
         </div>
     </div>
          
     <div class="col-md-5 background margin-top">
+        <table>
+            <tr class ="txt-clr-white">
+                <th>Ads / Ride </th>
+                <th>Ride Date </th>
+                <th>Ride Time </th>
+            </tr>
+        </table>
         <div class="scrolling-wrapper scroll-height" *ngIf="allRideData?.length > 0">
             <table>
-                <tr class ="txt-clr-white">
-                    <th>Ads Played </th>
-                    <th>Date</th>
-                    <th>Time</th>
-                </tr>
                 <tr class="display-vert pad-left txt-clr-white" *ngFor="let ride of allRideData">
-                    <td>{{ ride.adds_played }}</td>
+                    <td> {{ ride.adds_played }}</td>
                     <td> {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
                     <td> {{ride.ride_date.seconds * (1000.0)| date: 'hh:mm'}}</td>
                 </tr>

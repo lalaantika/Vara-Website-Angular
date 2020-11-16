@@ -1,14 +1,14 @@
 <div class="ui secondary  menu margin">
-  <a routerLink="home" class="active item menutext">
-    <img src="/assets/Images/vara_car.png"/>
+  <a routerLink="home" class=" item menutext">
+    <img class="logo-changes" src="/assets/Images/car_pink_nb1.png"/>
   </a>
-  <a routerLink="home" class="active item menutext">
+  <a routerLink="home" class=" item menutext">
   </a>
-  <a routerLink="home" class="active item menutext">
+  <a routerLink="home" class=" item menutext">
   </a>
-  <a routerLink="home" class="active item menutext">
+  <a routerLink="home" class=" item menutext">
   </a>
-  <a routerLink="home" class="active item menutext">
+  <a routerLink="home" class=" item menutext">
     Home
   </a>
   <a routerLink="about-us" class="item menutext">
@@ -24,14 +24,13 @@
     Tech-Support
   </a>
   <div class="right menu">
-    <!-- <div class="item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search link icon"></i>
-      </div>
-    </div> -->
-    <a routerLink="login" class="ui item">
-      Login
+  <a routerLink="login" class="ui item btn-main " *ngIf="isLoggedIn$=='false'; else notLoggedIn">
+      Log In
+  </a>
+  <ng-template #notLoggedIn>
+    <a routerLink="home" class="ui item btn-main " (click)="userauthService.logout()"(click)="reload()">
+      Log out
     </a>
+  </ng-template>
   </div>
 </div>

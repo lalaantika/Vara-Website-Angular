@@ -31,10 +31,11 @@
     "schematics": "^0.2.0",
     "semantic-ui-css": "^2.4.1",
     "tslib": "^2.0.0",
+    "typeface-muli": "^1.1.13",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1001.6",
+    "@angular-devkit/build-angular": "^0.1002.0",
     "@angular/cli": "~10.1.6",
     "@angular/compiler-cli": "~10.1.5",
     "@angular/language-service": "~10.1.5",
