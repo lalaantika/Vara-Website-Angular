@@ -1,12 +1,16 @@
-.margin-top{
+.margin-top {
     margin-top: 1.75rem;
 }
 
-.profile-label{
+.profile-label {
     font-size: 1.75rem;
 }
 
-.ui.secondary.button{
+.txt-apperance {
+    font-size: 1.6rem;
+}
+
+.ui.secondary.button {
     margin: 50px 0 50px 0;
     background-color: #e72ebe;
     height: 45px;
@@ -14,9 +18,11 @@
     font-size: 1.25rem;
     font-weight: 800;
 }
-.background{
+
+.background {
     background-color:#191919;
 }
+
 .scrolling-wrapper {
     overflow-x: hidden;
     overflow-y: scroll;
@@ -46,11 +52,8 @@ td {
     text-align: center;
     width: 200px;
 }
+
 tr {
     padding: .5rem;
     width: 175px;
-}
-
-.txt-apperance{
-    font-size: 1.5rem;
 }
