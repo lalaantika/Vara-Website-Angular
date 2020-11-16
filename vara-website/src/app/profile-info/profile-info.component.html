@@ -10,30 +10,30 @@
     <div class="col-md-6">
         <div class="row margin-top">
             <div class="col-md-4">
-                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="Email">Email</label>
+                <label class="txt-clr-black padding-top txt-alignment txt-apperance" for="Email">Email</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.email}}</h2>
+                <h2 class="txt-clr-black"> {{userData.email}}</h2>
                 <!-- <input type="Email" name="Email" #Email class="form-control" required autofocus />  -->
             </div>
         </div>
 
         <div class="row margin-top">
             <div class="col-md-4">
-                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="FirstName">First-Name</label>
+                <label class="txt-clr-black padding-top txt-alignment txt-apperance" for="FirstName">First-Name</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.firstName}}</h2>
+                <h2 class="txt-clr-black"> {{userData.firstName}}</h2>
                 <!-- <input type="text" name="FirstName" #FirstName class="form-control" required autofocus />  -->
             </div>
         </div>
 
         <div class="row margin-top">
             <div class="col-md-4">
-                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="LastName">Last-Name</label>
+                <label class="txt-clr-black padding-top txt-alignment txt-apperance" for="LastName">Last-Name</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.lastName}}</h2>
+                <h2 class="txt-clr-black"> {{userData.lastName}}</h2>
                 
                 <!-- <input type="text" name="LastName" #LastName class="form-control" required autofocus />  -->
             </div>
@@ -41,20 +41,20 @@
 
         <div class="row margin-top">
             <div class="col-md-4">
-                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="PhoneNumber">Phone-Number</label>
+                <label class="txt-clr-black padding-top txt-alignment txt-apperance" for="PhoneNumber">Phone-Number</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.phone}}</h2>
+                <h2 class="txt-clr-black"> {{userData.phone}}</h2>
                 <!-- <input type="text" name="PhoneNumber" #PhoneNumber class="form-control" required autofocus />  -->
             </div>
         </div>
 
         <div class="row margin-top">
             <div class="col-md-4">
-                <label class="txt-clr-white padding-top txt-alignment txt-apperance" for="city">City</label>
+                <label class="txt-clr-black padding-top txt-alignment txt-apperance" for="city">City</label>
             </div>
             <div class="col-md-4">
-                <h2 class="txt-clr-white"> {{userData.city}}</h2>
+                <h2 class="txt-clr-black"> {{userData.city}}</h2>
                 <!-- <input type="text" name="city" #city class="form-control" required autofocus />  -->
             </div>
         </div>
@@ -70,7 +70,7 @@
          
     <div class="col-md-5 background margin-top">
         <table>
-            <tr class ="txt-clr-white">
+            <tr class ="txt-clr-black">
                 <th>Ads / Ride </th>
                 <th>Ride Date </th>
                 <th>Ride Time </th>
@@ -78,7 +78,7 @@
         </table>
         <div class="scrolling-wrapper scroll-height" *ngIf="allRideData?.length > 0">
             <table>
-                <tr class="display-vert pad-left txt-clr-white" *ngFor="let ride of allRideData">
+                <tr class="display-vert pad-left txt-clr-black" *ngFor="let ride of allRideData">
                     <td> {{ ride.adds_played }}</td>
                     <td> {{ride.ride_date.seconds * (1000.0)| date: 'yyyy-MM-dd'}}</td>
                     <td> {{ride.ride_date.seconds * (1000.0)| date: 'hh:mm'}}</td>

@@ -1,5 +1,6 @@
 .background{
-    background-color:#191919;
+    /* background-color:#191919; */
+    background-color: whitesmoke;
 }
 
 .margin-top{
@@ -43,7 +44,7 @@
     height: 500px;
     right: 250px;
     bottom: 200px;
-    background-color: black;
+    background-color: whitesmoke;
 }
   
 .dropdown-toggle::after {

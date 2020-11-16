@@ -11,7 +11,8 @@
     height: 500px;
     right: 250px;
     bottom: 200px;
-    background-color: black;
+    /* background-color: black; */
+    background-color: whitesmoke;
 }
   
 .dropdown-toggle::after {
