@@ -15,7 +15,8 @@
     font-weight: 800;
 }
 .background{
-    background-color:#191919;
+    /* background-color:#191919; */
+    background-color: whitesmoke;
 }
 .scrolling-wrapper {
     overflow-x: hidden;
