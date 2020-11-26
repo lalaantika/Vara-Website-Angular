@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
     public userauthService: UserAuthserviceService) { }
 
   ngOnInit(): void {
-   this.isLoggedIn$ = this.idstorage.getUloggedIn()
+   this.isLoggedIn$ = this.idstorage.getUloggedIn() || 'false'
   }
 
   reload(){
