@@ -49,11 +49,14 @@ export class UserAuthserviceService {
     this.idstorage.setloggedIn("true")
     this.sendEmailVerification()
     return from( this.afs.collection('/UserInfo').doc(uid).set({
-      firstname: fname, 
-      lastname:lname, 
+      firstName: fname, 
+      lastName:lname, 
       email:email, 
       phone:phone, 
       city:city,
+      investor:false,
+      admin:false,
+      driver:false
     }))
   }
 
