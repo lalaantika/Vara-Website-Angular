@@ -26,7 +26,12 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrivacyComponent } from './footer/privacy/privacy.component';
 import { InvestorPageComponent } from './investor-page/investor-page.component';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const routes: Routes = [
+
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +50,7 @@ import { InvestorPageComponent } from './investor-page/investor-page.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes, { useHash: true }),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
