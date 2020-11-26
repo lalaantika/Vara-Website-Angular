@@ -1,0 +1,36 @@
+<div class="ui secondary  menu margin">
+  <a routerLink="home" class=" item menutext">
+    <img class="logo-changes" src="/assets/Images/car_pink_nb1.png"/>
+  </a>
+  <a routerLink="home" class=" item menutext">
+  </a>
+  <a routerLink="home" class=" item menutext">
+  </a>
+  <a routerLink="home" class=" item menutext">
+  </a>
+  <a routerLink="home" class=" item menutext">
+    Home
+  </a>
+  <a routerLink="about-us" class="item menutext">
+    About us
+  </a>
+  <a routerLink="team" class="item menutext">
+    Team
+  </a>
+  <a routerLink="contact" class="item menutext">
+    Contact
+  </a>
+  <a routerLink="tech-support" class="item menutext">
+    Tech-Support
+  </a>
+  <div class="right menu">
+  <a routerLink="login" class="ui item btn-main " *ngIf="isLoggedIn$=='false'; else notLoggedIn">
+      Log In
+  </a>
+  <ng-template #notLoggedIn>
+    <a routerLink="home" class="ui item btn-main " (click)="userauthService.logout()"(click)="reload()">
+      Log out
+    </a>
+  </ng-template>
+  </div>
+</div>

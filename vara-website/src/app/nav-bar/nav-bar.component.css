@@ -1,0 +1,16 @@
+.ui.secondary.menu .item {
+    color: #FF66C4;
+    font-size: 20px;
+}
+.ui.secondary.menu .item :active {
+    color:whitesmoke;
+}
+.ui.secondary.menu {
+    background-color:#191919;
+        margin-bottom: 30px;
+}
+
+.logo-changes {
+ border-radius: 1px;
+
+}

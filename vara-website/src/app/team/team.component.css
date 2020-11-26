@@ -1,0 +1,20 @@
+.rounded-circle{
+    border-radius: 50%;
+}
+.margin-top{
+    margin-top: 20px;;
+}
+.alignment{
+    text-align: center;
+}
+.top-margin{
+    margin-top: 3rem;
+    height: 800px;
+}
+.neg-margin{
+    margin-top: -.5rem;
+}
+.profile-txt-size{
+    font-size: 1.25rem;
+    text-align: left;
+}
