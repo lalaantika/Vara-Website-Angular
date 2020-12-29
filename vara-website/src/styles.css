@@ -1,5 +1,5 @@
 .background-clr {
-    background-color: black;
+    background-color: #191919;
 }
 
 .txt-clr-white {        /* The main white for the entire site */
@@ -23,18 +23,19 @@
  .vara-logo {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    border-radius: 50px;
  }
  /* Black & Pink with White Lettering */
  .btn-main {
     background:     #FF66C4;
-    background:    linear-gradient(#000000, #FF66C4 50%, #000000);
-    border:        2px solid #ffffff;
+    background:    linear-gradient(#191919, #FF66C4 50%, #191919);
+    border:        1px solid #ffffff;
     border-radius: 25px;
-    box-shadow:    1px 0 #ffffff;
-    padding:       15px 40px;
+    box-shadow:    1px 1px #ffffff;
+    padding:       10px 25px;
     color:         #ffffff;
     display:       inline-block;
-    font:          normal bold 15px/1 "Roboto-Italic", sans-serif;
+    font:          normal bold 20px/1 "Roboto", sans-serif;
     text-align:    center;
     text-shadow:   1px 1px #FF66C4;
  }

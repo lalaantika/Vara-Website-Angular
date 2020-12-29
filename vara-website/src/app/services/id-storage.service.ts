@@ -12,6 +12,13 @@ export class IdStorageService {
   
   getUId(): string {
 		return sessionStorage.getItem('uid');
+  }
+  
+  setloggedIn(isloggedin:string) {
+		sessionStorage.setItem('isloggedin', isloggedin);
+  }
+  
+  getUloggedIn(): string {
+		return sessionStorage.getItem('isloggedin')
 	}
-
 }
